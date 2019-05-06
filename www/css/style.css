@@ -1,0 +1,440 @@
+body { /* Стилизация всей страницы */
+	margin: 0;
+	font-family: sans-serif;
+}
+
+figcaption { /* Стилизация текста под изображением */
+	text-align: center;
+	color: #47027F;
+}
+
+.header_container { /* Стилизация шапки */
+	width: 100%;
+	max-width: 63%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.content_container { /* Стилизация контента */
+	width: 100%;
+	max-width: 55%;
+	margin: 0 auto;
+}
+
+.intro { /* Стилизация интро */
+	width: 100%;
+	height: 100vh;
+	background: url("../image/intro.jpg") center no-repeat;
+	border-bottom: 10px solid #47027F; 
+	background-size: cover;
+	margin-bottom: 40px;
+}
+
+.anchor { /* Стилизация якоря вниз */
+	color: #DEA41F;
+	font-size: 20px;
+	border: 2px solid #FFF;
+	padding: 5px 10px;
+	border-radius: 15px;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 90%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	text-decoration: none;
+	transition: 0.5s all;
+}
+
+.anchor:hover { /* Событийная стилизация якоря */
+	color: #42027F;
+	background-color: #DEA41F;
+}
+
+.header { /* Стилизация шапки */
+	padding-top: 30px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.link { /* Стилизация ссылок */
+	font-size: 25px;
+	font-weight: 600;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 40px;
+	color: #DEA41F;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	transition: 0.5s all;
+	border: 3px solid #FFF;
+	border-radius: 20px;
+	padding: 5px 10px;
+}
+
+.link:hover { /* Событийная стилизация ссылок */
+	color: #42027F;
+	background-color: #DEA41F;
+}
+
+.sideimages { /* Стилизация боковых изображений */
+	min-height: 100vh;
+	padding-bottom: 40px;
+	background: url(../image/lakers.jpg) center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.content { /* Стилизация контента */
+	font-family: sans-serif;
+	color: #FFF;
+	background-color: rgba(66, 2, 127, 0.7);
+	border: 5px solid #FFFFFF;
+	border-radius: 5px;
+    padding: 15px 30px 35px 30px;
+	width: 100%;
+	max-width: 55%;
+	margin: 0 auto;
+}
+
+.content_inner { /* Стилизация отдельных частей контента */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rimg { /* Стилизация правосторонних изображений */
+	border: 2px solid #FFFFFF;
+	padding: 5px;
+	background-color: #DEA41F;
+	margin: 20px 0px 20px 20px;
+}
+
+.limg { /* Стилизация левосторонних изображений */
+	border: 2px solid #FFFFFF;
+	padding: 5px;
+	background-color: #DEA41F;
+	margin: 20px 20px 20px 0px;
+}
+
+.wimg {
+	width: 200px;
+}
+.backanchor { /* Стилизация якоря наверх */
+	position: absolute;
+	text-decoration: none;
+	color: #DEA41F;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	margin: 10px 0;
+	transition: 0.5s all;
+}
+
+.backanchor:after { /* Стилизация псевдоэлемента "после" якоря наверх */
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin: 3px auto 0;
+	background-color: rgba(255,255,255,0);
+	transition: 0.5s all;
+}
+
+.backanchor:hover { /* Событийная стилизация якоря наверх */
+	color: red;
+}
+
+.backanchor:hover:after { /* Событийная стилизация псевдоэлемента "после" якоря наверх */
+	background-color: rgba(255,255,255,1);
+}
+
+.footer { /* Стилизация подвала */
+	border: 3px solid #000;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	max-width: 55%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #DEA41F;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 5px 30px;
+}
+
+.footer a{ /* Стилизация ссылок подвала */
+	text-decoration: none;
+	color: #DEA41F;
+	transition: 0.5s all;
+}
+
+.footer a:hover{ /* Событийная стилизация ссылок подвала */
+	color: red;
+}
+
+/* Стилизация и настройка выпадающего списка */
+.dropdown li{ 
+	position: relative;
+}
+.dropdown, .dropdown-inside {
+    padding: 0;
+    list-style-type: none;
+}
+.dropdown-inside {
+    left: -9999px;
+    position: absolute;
+}
+.dropdown-top {
+    margin: 0;
+    float: left;
+    display: inline;
+}
+.dropdown-top a {
+    display: block;
+}
+.dropdown-top:hover .dropdown-inside {
+    left: 3px;
+    display: block;
+}
+.dropdown-inside {
+	font-weight: 600;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 40px;
+	color: #DEA41F;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	border-radius: 5px;
+	border-top: none;
+	padding: 5px 10px 5px 10px;
+}
+
+.dropdown-inside a {
+	color: #DEA41F;
+	text-decoration: none;
+	padding: 5px 5px;
+	border-radius: 7px;
+	transition: 0.3s all;
+}
+.dropdown-inside a:hover {
+	color: #42027F;
+	background-color: #DEA41F;
+}
+/* Конец стилизации и настройки выпадающего списка */
+
+/* Дополнительная стилизация для побочных страниц */
+.menu {
+	margin: 0 0 30px 0;
+	height: 100px;
+	width: 100% - 7px;
+	background-image: url(../image/texture.jpeg);
+	background-size: cover;
+	border: 7px ridge #42027F;
+	padding: 30px 0 0 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* Стилизация изображения */
+.nimg {
+	width: 250px;
+}
+
+/* Стилизация названия страницы */
+.name {
+	color: #DEA41F;
+	font-size: 50px;
+	border-bottom: 3px solid #FFF;
+	position: relative;
+}
+
+.ssideimages { /* Стилизация боковых изображений */
+	min-height: 100vh;
+	background: url(../image/news.jpg) center;
+	background-attachment: fixed;
+	background-size: cover;
+	margin-bottom: 30px;
+}
+
+/* Стилизация заголовков */
+h2 {
+	margin: 0 0 0 0;
+	color: #DEA41F;
+}
+
+.ncontent_inner { /* Стилизация отдельных частей контента */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid #FFF;
+}
+
+/* Стилизация таблицы */
+table {
+	border: 5px ridge #000;
+	border-collapse: collapse;
+	width: 1050px;
+}
+
+td {
+	text-align: center;
+	border: 3px ridge #DEA41F;
+	background-color: #42027F;
+}
+
+caption {
+	font-size: 24px;
+	color: #DEA41F;
+	margin-bottom: 10px;
+}
+
+.head {
+	color: orange;
+	font-size: 18px;
+}
+/* Конец стилизация таблицы */
+
+/* Стилизация видео */
+.videos {
+	width: 900px;
+	margin: 0 auto;
+	display: block;
+}
+
+.contvid {
+	margin-top: 30px;
+	border: 5px ridge #DEA41F;
+}
+
+/* Стилизация для маленький экранов */
+@media screen and (max-width: 640px) {
+	.link {
+			font-size: 16px;
+			font-weight: 600;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 15px;
+			color: #DEA41F;
+			background-color: rgba(0, 0, 0, 0.5);
+			text-decoration: none;
+			transition: 0.5s all;
+			border: 2px solid #FFF;
+			border-radius: 10px;
+			padding: 2px 5px;
+	}
+	.header_container
+	{
+		max-width: 90%;
+	}
+	.anchor {
+		color: #DEA41F;
+		font-size: 14px;
+		border: 2px solid #FFF;
+		padding: 2px 5px;
+		border-radius: 7px;
+		background-color: rgba(0, 0, 0, 0.5);
+		top: 90%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		text-decoration: none;
+		transition: 0.5s all;
+	}
+	.content {
+		font-family: sans-serif;
+		font-size: 11px;
+		color: #FFF;
+		background-color: rgba(66, 2, 127, 0.7);
+		border: 2px solid #FFFFFF;
+		border-radius: 3px;
+		padding: 5px 10px 12px 10px;
+		width: 100%;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	.wimg {
+		width: 100px;
+	}
+	.footer {
+		border: 2px solid #000;
+		border-radius: 5px;
+		background-color: rgba(0,0,0,0.7);
+		width: 100%;
+		max-width: 73%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #DEA41F;
+		text-align: center;
+		font-size: 10px;
+		margin-top: 10px;
+		padding: 5px 30px;
+	}
+	.sideimages {
+		padding-bottom: 10px;
+	}
+	.backanchor {
+		position: absolute;
+		text-decoration: none;
+		color: #DEA41F;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		margin: 0px 0;
+		transition: 0.5s all;
+	}
+	.name {
+		color: #DEA41F;
+		font-size: 30px;
+		border-bottom: 3px solid #FFF;
+		position: relative;
+	}
+	.nimg {
+		width: 200px;
+	}
+	table {
+		border: 5px ridge #000;
+		border-collapse: collapse;
+		width: 430px;
+	}
+	.head {
+		font-size: 13px;
+	}
+	.videos {
+		width: 400px;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
